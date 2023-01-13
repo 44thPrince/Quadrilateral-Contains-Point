@@ -44,8 +44,8 @@ impl State {
                 x_bounds.push((slope_y1*(components[0])) + self.verticies[0][0]);
                 println!("x upper{:.10}", ((slope_y2*(components[0])) + self.verticies[3][0]));
                 x_bounds.push((slope_y2*(components[0])) + self.verticies[3][0]);
-                if x_bounds[0] <= components[0] || x_bounds[1] >= components[0] {
-                    if y_bounds[0] <= components[1] || y_bounds[1] >= components[1] {
+                if x_bounds[0] <= components[0] && x_bounds[1] >= components[0] {
+                    if y_bounds[0] <= components[1] && y_bounds[1] >= components[1] {
                         return true;
                     }
                 }
